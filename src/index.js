@@ -26,8 +26,8 @@ returnFirstArgument('Hello World');
    sumWithDefaults(10, 20) вернет 30
    sumWithDefaults(2, 4) вернет 6
 */
-function sumWithDefaults(a, b) {
-    return a + b;
+function sumWithDefaults(a, c) {
+    return a + c;
 }
 /*
 
