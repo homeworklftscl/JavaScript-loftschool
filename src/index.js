@@ -54,12 +54,14 @@ function sumWithDefaults(a, b) {
 function returnFnResult(sum) {
 
     function sum(a, b) {
+        let res = a+b
         
-        return a+b;
+        return res;
     }
-    
-    return sum(8, 2)
+     
+    return sum(8, 5);
 }
+
 console.log(returnFnResult());
 
 /*
@@ -98,8 +100,8 @@ console.log(counter());
  Пример:
    returnArgumentsArray(1, 2, 3) вернет [1, 2, 3]
  */
-function returnArgumentsArray(...arr) {
-    return arr
+function returnArgumentsArray(...arg) {
+    return arg
 }
 console.log(returnArgumentsArray(1, 2, 3, 4, 'hi'));
 
