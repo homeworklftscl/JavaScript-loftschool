@@ -62,7 +62,7 @@ function returnFnResult(sum) {
     return sum(8, 5);
 }
 
-console.log(returnFnResult());
+// console.log(returnFnResult());
 
 /*
  Задание 4:
@@ -87,9 +87,9 @@ function returnCounter(number) {
 }
 let counter = returnCounter(10);
 
-console.log(counter());
-console.log(counter());
-console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
 
 /*
  Задание 5 *:
@@ -103,7 +103,7 @@ console.log(counter());
 function returnArgumentsArray(...arg) {
     return arg
 }
-console.log(returnArgumentsArray(1, 2, 3, 4, 'hi'));
+// console.log(returnArgumentsArray(1, 2, 3, 4, 'hi'));
 
 /*
  Задание 6 *:
