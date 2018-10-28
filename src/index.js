@@ -100,8 +100,8 @@ console.log(counter());
  Пример:
    returnArgumentsArray(1, 2, 3) вернет [1, 2, 3]
  */
-function returnArgumentsArray(...arg) {
-    return arg
+function returnArgumentsArray(...arr) {
+    return arr
 }
 console.log(returnArgumentsArray(1, 2, 3, 4, 'hi'));
 
