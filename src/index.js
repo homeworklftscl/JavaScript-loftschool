@@ -38,8 +38,10 @@ function sumWithDefaults(a, c) {
  */
 
 function sumWithDefaults(a, b) {
-    b = b || 100;
-    
+    //b = b || 100;
+    if (b === undefined) {
+        b = 100
+    }
     return a+b;
 }
 
@@ -51,18 +53,9 @@ function sumWithDefaults(a, b) {
  Пример:
    returnFnResult(() => 'привет') вернет 'привет'
  */
-function returnFnResult(sum) {
-
-    function sum(a, b) {
-        let res = a+b
-        
-        return res;
-    }
-     
-    return sum(8, 5);
+function returnFnResult(func) {
+    return func();
 }
-
-// console.log(returnFnResult());
 
 /*
  Задание 4:
@@ -100,8 +93,8 @@ let counter = returnCounter(10);
  Пример:
    returnArgumentsArray(1, 2, 3) вернет [1, 2, 3]
  */
-function returnArgumentsArray(...arg) {
-    return arg
+function returnArgumentsArray(...arr) {
+    return arr
 }
 // console.log(returnArgumentsArray(1, 2, 3, 4, 'hi'));
 
