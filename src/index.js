@@ -26,8 +26,8 @@ returnFirstArgument('Hello World');
    sumWithDefaults(10, 20) вернет 30
    sumWithDefaults(2, 4) вернет 6
 */
-function sumWithDefaults(a, b) {
-    return a + b;
+function sumWithDefaults(a, c) {
+    return a + c;
 }
 /*
 
@@ -80,9 +80,9 @@ function returnCounter(number) {
 }
 let counter = returnCounter(10);
 
-console.log(counter());
-console.log(counter());
-console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
 
 /*
  Задание 5 *:
@@ -96,7 +96,7 @@ console.log(counter());
 function returnArgumentsArray(...arr) {
     return arr
 }
-console.log(returnArgumentsArray(1, 2, 3, 4, 'hi'));
+// console.log(returnArgumentsArray(1, 2, 3, 4, 'hi'));
 
 /*
  Задание 6 *:
