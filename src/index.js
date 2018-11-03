@@ -38,8 +38,10 @@ function sumWithDefaults(a, b) {
  */
 
 function sumWithDefaults(a, b) {
-    b = b || 100;
-    
+    //b = b || 100;
+    if (b === undefined) {
+        b = 100
+    }
     return a+b;
 }
 
@@ -51,18 +53,9 @@ function sumWithDefaults(a, b) {
  Пример:
    returnFnResult(() => 'привет') вернет 'привет'
  */
-function returnFnResult(sum) {
-
-    function sum(a, b) {
-        let res = a+b
-        
-        return res;
-    }
-     
-    return sum(8, 5);
+function returnFnResult(func) {
+    return func();
 }
-
-console.log(returnFnResult());
 
 /*
  Задание 4:
