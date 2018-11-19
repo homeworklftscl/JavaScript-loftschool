@@ -103,7 +103,7 @@ filterInput.addEventListener('keyup', function () {
     // это обработчик нажатия клавиш в текстовом поле
     let searchValue = filterInput.value;
 
-    if (filterInput === '') {
+    if (searchValue === '') {
         ul.innerHTML = '';
     }
     let abc = loadTowns().then(function (towns) {
@@ -115,9 +115,7 @@ filterInput.addEventListener('keyup', function () {
         while (ul.firstChild) {
             ul.removeChild(ul.firstChild);
         }
-        while (searchValue) {
-            ul.removeChild(ul.firstChild);
-        }
+        
         for (let i = 0; i < arr.length; i++) {
             if (isMatching(arr[i], searchValue)) {
                 let li = document.createElement('li');
