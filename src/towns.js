@@ -75,10 +75,8 @@ function loadTowns() {
    isMatching('Moscow', 'Moscov') // false
  */
 function isMatching(full, chunk) {
-    let lowFull = full.toLowerCase();
-    let lowChunk = chunk.toLowerCase();
 
-    if (~lowFull.indexOf(lowChunk)) {
+    if (full.toLowerCase().includes(chunk.toLowerCase())) {
         return true;
     } 
     
@@ -95,16 +93,15 @@ const filterInput = homeworkContainer.querySelector('#filter-input');
 /* Блок с результатами поиска */
 const filterResult = homeworkContainer.querySelector('#filter-result');
 
-let ul = document.createElement('ul');
-
-filterResult.appendChild(ul);
 loadTowns();
 filterInput.addEventListener('keyup', function () {
     // это обработчик нажатия клавиш в текстовом поле
     let searchValue = filterInput.value;
 
     if (searchValue === '') {
-        ul.innerHTML = '';
+        filterResult.innerHTML = '';
+        
+        return searchValue;
     }
     let abc = loadTowns().then(function (towns) {
         let arr = [];
@@ -112,8 +109,8 @@ filterInput.addEventListener('keyup', function () {
         for (let i = 0; i < towns.length; i++) {
             arr.push(towns[i].name);
         }
-        while (ul.firstChild) {
-            ul.removeChild(ul.firstChild);
+        while (filterResult.firstChild) {
+            filterResult.removeChild(filterResult.firstChild);
         }
         
         for (let i = 0; i < arr.length; i++) {
@@ -121,7 +118,7 @@ filterInput.addEventListener('keyup', function () {
                 let li = document.createElement('li');
 
                 li.innerHTML = arr[i];
-                ul.appendChild(li);
+                filterResult.appendChild(li);
             }
         }
 
